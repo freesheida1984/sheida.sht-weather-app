@@ -24,10 +24,35 @@ h1{
     margin-inline-end: 0px;
     margin-bottom: 0;
 }
-.weather-app{
+.weather-app-wrapper{
     max-width: 800px;
     margin: 60px auto;
+    
+}
+.weather-app{
+    max-width: 800px;
+    margin-bottom: 0;    
     padding: 20px;
     border: 1px solid rgb(231, 219, 231);
     border-radius: 10px;
+      
+}
+.location{
+    margin-bottom: 20px;
+}
+.clearfix img{
+    margin-right: 5px;
+    float: left;
+    height:60px ;
+    width: 60px;
+}
+.clearfix strong{
+    font-size: 64px;
+    font-weight: 400;
+    line-height: 1;
+}
+.clearfix span{
+    position: relative;
+    font-size: 14px;
+    top: -34px;
 }

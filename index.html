@@ -11,7 +11,9 @@
 </head>
 <body>
     <div class="container">
+    <div class="weather-app-wrapper">
     <div class="weather-app">
+    <div class="location">
     <h1>
         New York, NY, USA
     </h1>
@@ -23,12 +25,16 @@
             Clear
         </li>
     </ul> 
+    </div>
     <div class="row">
         <div class="col-6">
+            <div class="clearfix">
             <img src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/080/724/original/Yellow_Circle.png?1683401347"
-             width="50px" alt="clear"> 
-            12 °C | °F
-        </div>
+             width="50px" alt="clear"/>        
+            <strong>12</strong>
+            <span class="units">°C | <a href="#">°F</a></span> 
+            </div>            
+        </div>       
         <div class="col-6">
             <ul>
                 <li>
@@ -42,13 +48,14 @@
                 </li>
             </ul>
         </div>
-    </div>
-    <small>
+    </div>  
+    </div> 
+      <small>
         This project was coded by Sheida Shariat and is and is
         <a href="https://github.com/freesheida1984/sheida.sht-weather-app" target="_blank"> Open-Sourced on Github </a>
         and <a href="https://sheidasht-weather-app.netlify.app/" target="_blank"> hosted on Netlify </a>
-    </small>
-    </div>    
+    </small>   
+    </div>
     </div>
 </body>
 <script src="src/app.js"></script>
