@@ -9,6 +9,7 @@ ul{
 }
 li{    
     list-style: none;
+    text-transform: capitalize;
     color: rgb(135,135,135);
     padding: 0;
     margin: 0;
