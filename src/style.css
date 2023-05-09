@@ -8,11 +8,13 @@ ul{
     margin: 0;
 }
 li{    
-    list-style: none;
-    text-transform: capitalize;
+    list-style: none;    
     color: rgb(135,135,135);
     padding: 0;
     margin: 0;
+}
+li:first-letter{
+    text-transform: capitalize;    
 }
 h1{
     color: #878787;
