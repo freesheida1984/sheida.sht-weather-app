@@ -21,8 +21,7 @@ function formatDtae(timetemp){
     return `${day} ${hours}:${minutes}`;
 }
 
-function dispalyTemperature(response){  
-    console.log(response.data);    
+function dispalyTemperature(response){ 
     document.querySelector("#temperature").innerHTML = Math.round(response.data.temperature.current);
     document.querySelector("#city").innerHTML = response.data.city;    
     document.querySelector("#description").innerHTML = response.data.condition.description;    
