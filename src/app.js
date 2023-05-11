@@ -1,5 +1,5 @@
-function formatDate(timetemp) {
-    let date = new Date(timetemp);
+function formatDate(timetamp) {
+    let date = new Date(timetamp);
     let hours = date.getHours();
     if (hours < 10) {
         hours = `0${hours}`;
@@ -18,7 +18,7 @@ function formatDate(timetemp) {
         "Saturday"
     ];
     let day = days[date.getDay()];
-    return `${day} ${hours}:${minutes}`;
+    return `${day} ${hours}:${minutes}`;       
 }
 
 function displayTemperature(response) {
@@ -29,11 +29,22 @@ function displayTemperature(response) {
     document.querySelector("#humidity").innerHTML = response.data.temperature.humidity;
     document.querySelector("#wind").innerHTML = Math.round(response.data.wind.speed);
     document.querySelector("#date").innerHTML = formatDate(response.data.time);
-    document.querySelector("#icon").setAttribute("src", `https://openweathermap.org/img/wn/${response.data.condition.icon}@2x.png`);
-    
+    document.querySelector("#icon").setAttribute("src", response.data.condition.icon_url);
 }
 
-let apiKey = "t90dd4fb0b4eobe0b39b7a843048d63e";
-let city = "New York";
-let apiUrl = `https://api.shecodes.io/weather/v1/current?query=${city}&key=${apiKey}&units=metric`;
-axios.get(apiUrl).then(displayTemperature);
+function search(city) {
+    let apiKey = "t90dd4fb0b4eobe0b39b7a843048d63e";
+    let apiUrl = `https://api.shecodes.io/weather/v1/current?query=${city}&key=${apiKey}&units=metric`;
+    axios.get(apiUrl).then(displayTemperature);
+}
+
+function handleSubmit(event) {
+    event.preventDefault();
+    let cityInput = document.querySelector("#search-city-input");
+    search(cityInput.value);
+}
+
+let form = document.querySelector("#search-form");
+form.addEventListener("submit", handleSubmit);
+
+search("New York");

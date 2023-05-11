@@ -59,3 +59,21 @@ h1{
     font-size: 14px;
     top: -34px;
 }
+.btn-search{
+    color: white;            
+    border: none; 
+    background: rgb(20, 179, 163);
+    text-align: center; 
+    margin-top: -2px;
+    height: 35px;
+    
+}  
+.search{
+    text-align: center; 
+    padding-left: 85px;   
+    padding-right: 85px; 
+    height: 32px; 
+    width: 500px;
+     
+          
+}
