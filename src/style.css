@@ -33,12 +33,13 @@ h1{
     
 }
 .weather-app{
-    max-width: 800px;
+    background: radial-gradient(328px at 2.9% 15%, rgb(191, 224, 251) 0%, rgb(232, 233, 251) 25.8%,
+    rgb(252, 239, 250) 50.8%, rgb(234, 251, 251) 77.6%, rgb(240, 251, 244) 100.7%);
+    max-width: 800px;    
     margin-bottom: 0;    
-    padding: 20px;
+    padding: 30px;
     border: 1px solid rgb(231, 219, 231);
-    border-radius: 10px;
-      
+    border-radius: 10px;   
 }
 .location{
     margin-bottom: 20px;
@@ -62,20 +63,19 @@ h1{
 .btn-search{
     color: white;            
     border: none; 
-    background: rgb(20, 179, 163);
+    background: rgb(80, 196, 184);
     text-align: center; 
     margin-top: -2px;
-    height: 35px;
+    height: 35px;    
     
 }  
-.search{
+.search-button{
     text-align: center; 
     padding-left: 85px;   
     padding-right: 85px; 
     height: 32px; 
     width: 500px;
-     
-          
+                   
 }
 .active {
     color: black;
@@ -83,4 +83,5 @@ h1{
 }
 .active:hover {
     text-decoration: none;
+    color: black;
 }
